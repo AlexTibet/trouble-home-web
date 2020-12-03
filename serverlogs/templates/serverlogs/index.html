@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  TroubleHome
+{% endblock %}
+
+{% block content %}
+                <div class="content">
+                    <div class="logs_body">
+                        <form method="get" class="logs__menu">
+                            <ul class="logs__list">
+                                <li>
+                                    <a href="\serverlogs" class="logs__btn">
+                                        <span class="logs-btn__text">Скачать текущие</span>
+                                        <span class="logs-btn__waves"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="logs__btn">
+                                        <span class="logs-btn__text">Скачать предыдущие</span>
+                                        <span class="logs-btn__waves"></span>
+                                    </a>
+                                </li>
+                                <input type="text" class="logs__input" name="steam_id" size="20">
+                                <li>
+                                    <a href="#" class="logs__btn">
+                                        <span class="logs-btn__text">Посмотреть по SteamID</span>
+                                        <span class="logs-btn__waves"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="logs__btn">
+                                        <span class="logs-btn__text">Посмотреть всё</span>
+                                        <span class="logs-btn__waves"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="logs__btn">
+                                        <span class="logs-btn__text">Очистить кэш</span>
+                                        <span class="logs-btn__waves"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </form>
+                        <div class="logs__output">
+                            <p>test output</p>
+                        </div>
+                    </div>
+                </div>
+{% endblock %}
