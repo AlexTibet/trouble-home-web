@@ -1,0 +1,102 @@
+<!doctype html>
+<<html lang="ru">
+	<head>
+		<!-- Заголовок страницы в браузере -->
+        <title>
+        {% block title %}
+          Trouble Home
+        {% endblock %}
+        </title>
+        <link rel="stylesheet" href="../static/css/style.css">
+		<meta charset="UTF-8">
+		<!-- Настройки адаптивности страницы  -->
+		<!-- Адаптивность  -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- Отключает формирование ссылки у номера телефона на iOS -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Краткое описание страницы">
+		<meta name="keywords" content="Ключевые слова, страницы">
+		<!-- Управление доступом поисковых роботов к странице -->
+		<!-- Запрет индексации страницы полностью -->
+		<meta name="robots" content="none">
+		<!-- Автор страницы -->
+		<meta name="Author" content="Александр Собко">
+		<!-- Авторские права -->
+		<meta name="Copyright" content="Trouble Home">
+		<!-- Адрес автора -->
+		<meta name="Address" content="Russia, Tomsk">
+		<!-- локализация сайта, для русскоязычного сайта ru_RU -->
+		<meta property="og:locale" content="ru_RU">
+		<!-- тип контента, по умолчанию используется article -->
+		<meta property="og:type" content="article">
+		<!-- заголовок страницы, который будет выводится в записи социальной сети -->
+		<meta property="og:title" content="Trouble Home">
+		<!-- описание страницы -->
+		<meta property="og:description" content="сервер Beasts of Bermuda">
+		<!-- ссылка на изображение, которое будет публиковаться в записи -->
+		<meta property="og:image" content="#">
+		<!-- ссылка на текущую страницу -->
+		<meta property="og:url" content="#">
+		<!-- название сайта -->
+		<meta property="og:site_name" content="Trouble Home">
+		<!-- Тип карты, по умолчанию используется summary -->
+		<meta name="twitter:card" content="summary">
+		<!-- Имя/логин автора -->
+		<meta name="twitter:site" content="AlexTibet">
+		<!-- Название страницы -->
+		<meta name="twitter:title" content="Trouble Home">
+		<!-- Описание страницы -->
+		<meta name="twitter:description" content="сервер Beasts of Bermuda">
+		<!-- Cсылка на изображение -->
+		<meta name="twitter:image" content="#">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__body">
+                        <a href="{{ url_for('index') }}" class="header__logo">
+                            <img src="../static/images/icons/trouble_icon_512x512.png" alt="oops">
+                        </a>
+                        <div class="header__burger">
+                            <span> </span>
+                        </div>
+                        <nav class="header__menu">
+                            <ul class="header__list">
+                                <li>
+                                    <a href="{{ url_for('index') }}" class="header__link">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('server_config') }}" class="header__link">Конфигурация</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('server_logs.index') }}" class="header__link">Логи</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('trouble_bots') }}" class="header__link">Бот</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+                {% block content %}
+                  content
+                {% endblock %}
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__row">
+                        <div class="footer__text">Trouble Home 2020</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="../static/js/script.js"></script>
+    </body>
+</html>
+
+

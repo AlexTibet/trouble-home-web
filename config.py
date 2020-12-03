@@ -1,2 +1,2 @@
 class Configuration:
-    DEBUG = True
+    DEBUG = False
