@@ -245,7 +245,6 @@ html,body {
 
 .top__row {
   display: flex;
-  justify-content: space-between;
 }
 
 .top__body {
@@ -259,7 +258,7 @@ html,body {
 }
 .top__list {}
 .top__list li {
-  background: url("../images/icons/li.svg") 0 0 no-repeat;
+  background: url("../images/li.svg") 0 0 no-repeat;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
   font-size: 20px;
   padding: 0 0 0 25px;
@@ -268,14 +267,11 @@ html,body {
 .top__list li:last-child{
   margin: 0;
 }
-.top__text{
+.top__text {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
   font-size: 20px;
 }
 @media (max-width: 767px) {
-  .top__image {
-    display: none;
-  }
   .top__title {
     font-size: 40px;
   }
@@ -285,36 +281,31 @@ html,body {
 }
 
 .logs_body {
+  display:flex;
   background-color: #36393E;
-
 }
 .logs__menu {
-  position: fixed;
-  top: 15%;
-  left: 0;
-  width: 16%;
-  height: 420px;
-  overflow: auto;
-  background-color: #2F3136;
-  padding: 10px  10px 20px 10px;
-  justify-content: center;
-  align-items: center;
+
 }
 .logs__output {
-  position: relative;
-  left: 17%;
-  padding: 10px 0;
-  line-height: 20px;
-  color: whitesmoke;
+  flex: 1 1 auto;
+  color: LightCyan;
 }
+
 .logs__list {
+  flex: 0 0 200px;
+  margin-top: 30px;
+  background-color: #2F3136;
+  padding: 20px;
+  border-radius: 20px;
 }
 .logs__list li {
   list-style: none;
   margin: 10px 10px 10px 10px;
-  background-color: #36393E;
   padding: 10px;
-
+}
+.logs__list li:hover {
+  background-color: #36393E;
 }
 .logs__link {
   color: white;
@@ -323,35 +314,17 @@ html,body {
 }
 
 .logs__btn {
-  width: 280px;
-  height: 60px;
-  display:-webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0 0 10px 10px;
   text-decoration: none;
-
-  transition: all 0.8s ease 0s;
-  -webkit-transition: all 0.8s ease 0s;
-  -moz-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
 }
 .logs-btn__text {
   color: white;
-  letter-spacing: 8px;
-  text-transform: uppercase;
   position: relative;
   z-index: 10;
 }
 .logs-btn__waves {
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  background-color: aqua;
 }
 
 
