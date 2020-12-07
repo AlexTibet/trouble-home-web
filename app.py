@@ -1,12 +1,8 @@
 from flask import Flask
+from config import Configuration
+from serverlogs.blueprint import server_logs
 
 app = Flask(__name__)
+app.config.from_object(Configuration)
 
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-
-if __name__ == '__main__':
-    app.run()
+app.register_blueprint(server_logs, url_prefix='/serverlogs')
