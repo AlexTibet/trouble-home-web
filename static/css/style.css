@@ -70,6 +70,7 @@ html,body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: #36393E;
 }
 
 .container {
@@ -282,7 +283,6 @@ html,body {
 
 .logs_body {
   display:flex;
-  background-color: #36393E;
 }
 .logs__menu {
 
@@ -290,11 +290,12 @@ html,body {
 .logs__output {
   flex: 1 1 auto;
   color: LightCyan;
+  margin: 20px;
 }
-
 .logs__list {
   flex: 0 0 200px;
   margin-top: 30px;
+  margin-left: 30px;
   background-color: #2F3136;
   padding: 20px;
   border-radius: 20px;
