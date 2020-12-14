@@ -10,10 +10,11 @@ class ServerLogsValidator:
         self._output_type = output_type
 
     def _valid_steam_id(self) -> bool:
-        return True if self._steam_id is not None and self._steam_id.isdigit() and len(self._steam_id) == 17 else False
+        return True if isinstance(self._steam_id, str) and self._steam_id.isdigit() and len(self._steam_id) == 17 \
+            else False
 
     def _valid_log_name(self) -> bool:
-        return True if isinstance(self._log_name, str) and self._log_name.split('.')[-1] == 'log' else False
+        return True if isinstance(self._log_name, str) and self._log_name.split('.')[-1] in ('log', 'txt') else False
 
     def _valid_server_name(self) -> bool:
         return True if self._server_name in SERVER_NAMES else False
