@@ -42,3 +42,8 @@ class TestServerLogsValidator(unittest.TestCase):
         for data, answer in self.atypical_data.items():
             validator = ServerLogsValidator(*data)
             self.assertEqual(validator.validation(), answer)
+
+    def test_get_valid_data(self):
+        for data in self.correct_data.keys():
+            validator = ServerLogsValidator(*data)
+            self.assertEqual(tuple(validator.get_valid_data().values()), data)
