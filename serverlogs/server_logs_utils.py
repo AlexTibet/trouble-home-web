@@ -1,4 +1,4 @@
-from serverlogs.serverlogs_config import SERVER_NAMES, OUTPUT_TYPES
+from serverlogs.serverlogs_config import SERVER_NAMES, OUTPUT_TYPES, LOG_DIR
 from ftplib import FTP, error_perm
 from os import path
 
@@ -74,7 +74,7 @@ class LogsFindAndDownloader:
                 return False
             ftp.cwd(directory)
             try:
-                with open(f'{path.dirname(__file__)}/downloads/logs/{file_name}', 'wb') as file:
+                with open(f'{path.dirname(__file__)}/{LOG_DIR}/{file_name}', 'wb') as file:
                     ftp.retrbinary('RETR ' + file_name, file.write)
                     return True
             except FileNotFoundError:
